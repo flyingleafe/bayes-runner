@@ -1,6 +1,10 @@
 module Main where
 
-import Lib
+import Options.Applicative
+import Universum
+
+import Parser
 
 main :: IO ()
-main = someFunc
+main = undefined
+

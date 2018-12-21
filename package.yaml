@@ -1,10 +1,10 @@
 name:                bayes-runner
 version:             0.1.0.0
-github:              "githubuser/bayes-runner"
+github:              "flyingleafe/bayes-runner"
 license:             BSD3
-author:              "Author name here"
-maintainer:          "example@example.com"
-copyright:           "2018 Author name here"
+author:              "Dmitrii Mukhutdinov"
+maintainer:          "flyingleafe@gmail.com"
+copyright:           "2018 Dmitrii Mukhutdinov"
 
 extra-source-files:
 - README.md
@@ -21,9 +21,47 @@ description:         Please see the README on GitHub at <https://github.com/gith
 
 dependencies:
 - base >= 4.7 && < 5
+- universum
+- bytestring
+
+default-extensions:
+- NoImplicitPrelude
+- AllowAmbiguousTypes
+- BangPatterns
+- ConstraintKinds
+- DataKinds
+- DefaultSignatures
+- DeriveDataTypeable
+- DeriveGeneric
+- EmptyCase
+- FlexibleContexts
+- FlexibleInstances
+- FunctionalDependencies
+- GeneralizedNewtypeDeriving
+- LambdaCase
+- MonadFailDesugaring
+- MultiParamTypeClasses
+- MultiWayIf
+- NamedFieldPuns
+- OverloadedStrings
+- PatternSynonyms
+- RankNTypes
+- RecordWildCards
+- ScopedTypeVariables
+- StandaloneDeriving
+- TemplateHaskell
+- TupleSections
+- TypeFamilies
+- TypeOperators
+- UndecidableInstances
+- ViewPatterns
+- TypeApplications
 
 library:
   source-dirs: src
+  dependencies:
+    - containers
+    - attoparsec
 
 executables:
   bayes-runner-exe:
@@ -35,6 +73,7 @@ executables:
     - -with-rtsopts=-N
     dependencies:
     - bayes-runner
+    - optparse-applicative
 
 tests:
   bayes-runner-test:
